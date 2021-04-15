@@ -1223,10 +1223,16 @@ function my_plugin_activate () {
 register_activation_hook (__FILE__, 'my_plugin_activate');
 
 
-function get_currency_clw_for_woocommerce($currency){
+function get_currency_clw_for_woocommerce($currency = false){
 	$data = unserialize(get_option('clw_currency'));
-	foreach ($data as $key => $value) {
-	$selected = ($key == $currency) ? 'selected' : '';
+	?>
+  <option value="">Select Currency Symbol</option>
+  <?php
+  foreach ($data as $key => $value) {
+	$selected = '';
+  if($currency){
+    $selected = ($key == $currency) ? 'selected' : '';
+  }
   ?>
 	 	<option value="<?php echo $key?>" <?php echo $selected?>><?php echo $value['name']?> - [<?php echo $key?>]</option>	
 	<?php
