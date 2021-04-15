@@ -1223,3 +1223,13 @@ if( !is_serialized( $clw_currency ) ) {
   
 }
 register_activation_hook (__FILE__, 'my_plugin_activate');
+
+
+function get_currency_clw_for_woocommerce(){
+	$data = maybe_unserialize(get_option('active_plugins'));
+	foreach ($data as $key => $value) {
+	?>
+	 	<option value="<?php echo $key?>">[<?php echo $key?>] - <?php echo $value['name']?></option>	
+	<?php
+	}
+}
