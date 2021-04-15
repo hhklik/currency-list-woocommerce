@@ -1215,18 +1215,16 @@ function my_plugin_activate () {
   ),
 )";
 
-if( !is_serialized( $clw_currency ) ) {
-    $clw_currency = maybe_serialize($clw_currency);
-}
 
-  add_option ('clw_currency', $clw_currency);
+
+  add_option ('clw_currency', serialize($clw_currency));
   
 }
 register_activation_hook (__FILE__, 'my_plugin_activate');
 
 
 function get_currency_clw_for_woocommerce(){
-	$data = maybe_unserialize(get_option('active_plugins'));
+	$data = unserialize(get_option('clw_currency'));
 	foreach ($data as $key => $value) {
 	?>
 	 	<option value="<?php echo $key?>">[<?php echo $key?>] - <?php echo $value['name']?></option>	
