@@ -22,7 +22,7 @@ function my_plugin_activate () {
 
   add_option ('Activated_Plugin', 'Plugin-Slug');
 
-  $clw_currency = "array (
+  $clw_currency = array (
   'USD' => 
   array (
     'symbol' => '$',
@@ -1213,7 +1213,7 @@ function my_plugin_activate () {
     'code' => 'ZWL',
     'name_plural' => 'Zimbabwean Dollar',
   ),
-)";
+);
 
 
 
