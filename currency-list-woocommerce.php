@@ -1217,7 +1217,7 @@ function my_plugin_activate () {
 
 
 
-  add_option ('clw_currency', serialize($clw_currency));
+  update_option ('clw_currency', serialize($clw_currency));
   
 }
 register_activation_hook (__FILE__, 'my_plugin_activate');
