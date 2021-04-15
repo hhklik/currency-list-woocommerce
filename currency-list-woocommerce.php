@@ -1,6 +1,6 @@
 <?php 
 /*
-Plugin Name: currency list woocommerce
+Plugin Name: currency-list-woocommerce
 Plugin URI: https://github.com/hhklik/currency-list-woocommerce
 Description: Currency list, for woocomerce
 Version: 0.0.1
