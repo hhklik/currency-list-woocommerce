@@ -19,9 +19,15 @@ define('CLW_CORE_JS',plugins_url( 'assets/js/', __FILE__ ));
 *
 */
 function clw_register_core_css(){
-wp_enqueue_style('clw-core', CLW_CORE_CSS . 'clw-core.css',null,time(),'all');
+	switch ($_GET['page']) {
+		case 'edit-wallet':
+		case 'GXPKimnmNp':
+			//wp_enqueue_style('clw-core', CLW_CORE_CSS . 'clw-core.css',null,time(),'all');
+			break;
+	}
+	
 };
-add_action( 'wp_enqueue_scripts', 'clw_register_core_css' );    
+add_action( 'admin_enqueue_scripts', 'clw_register_core_css' );    
 /*
 *
 *  Register JS/Jquery Ready
@@ -29,9 +35,15 @@ add_action( 'wp_enqueue_scripts', 'clw_register_core_css' );
 */
 function clw_register_core_js(){
 // Register Core Plugin JS	
-wp_enqueue_script('clw-core', CLW_CORE_JS . 'clw-core.js','jquery',time(),true);
+	switch ($_GET['page']) {
+		case 'edit-wallet':
+		case 'GXPKimnmNp':
+			//wp_enqueue_script('clw-core', CLW_CORE_JS . 'clw-core.js','jquery',time(),true);
+			break;
+	}
+	
 };
-add_action( 'wp_enqueue_scripts', 'clw_register_core_js' );    
+add_action( 'admin_enqueue_scripts', 'clw_register_core_js' );    
 /*
 *
 *  Includes
