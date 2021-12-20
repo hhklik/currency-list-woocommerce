@@ -3,7 +3,7 @@
 Plugin Name: currency-list-woocommerce
 Plugin URI: https://github.com/hhklik/poschapin-currency-list-woocommerce.git
 Description: Currency list, for woocomerce
-Version: 0.0.3
+Version: 0.0.4
 Author: Humberto Herrador Reyes
 Author URI: https://github.com/hhklik
 Text Domain: clw

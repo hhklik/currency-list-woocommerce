@@ -19,11 +19,13 @@ define('CLW_CORE_JS',plugins_url( 'assets/js/', __FILE__ ));
 *
 */
 function clw_register_core_css(){
-	switch ($_GET['page']) {
-		case 'edit-wallet':
-		case 'GXPKimnmNp':
-			//wp_enqueue_style('clw-core', CLW_CORE_CSS . 'clw-core.css',null,time(),'all');
-			break;
+	if(isset($_GET['page'])){
+		switch ($_GET['page']) {
+			case 'edit-wallet':
+			case 'GXPKimnmNp':
+				//wp_enqueue_style('clw-core', CLW_CORE_CSS . 'clw-core.css',null,time(),'all');
+				break;
+		}
 	}
 	
 };
@@ -35,11 +37,13 @@ add_action( 'admin_enqueue_scripts', 'clw_register_core_css' );
 */
 function clw_register_core_js(){
 // Register Core Plugin JS	
-	switch ($_GET['page']) {
-		case 'edit-wallet':
-		case 'GXPKimnmNp':
-			//wp_enqueue_script('clw-core', CLW_CORE_JS . 'clw-core.js','jquery',time(),true);
-			break;
+	if(isset($_GET['page'])){
+		switch ($_GET['page']) {
+			case 'edit-wallet':
+			case 'GXPKimnmNp':
+				//wp_enqueue_script('clw-core', CLW_CORE_JS . 'clw-core.js','jquery',time(),true);
+				break;
+		}
 	}
 	
 };
