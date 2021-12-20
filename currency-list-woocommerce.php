@@ -1,9 +1,9 @@
 <?php 
 /*
 Plugin Name: currency-list-woocommerce
-Plugin URI: https://github.com/hhklik/currency-list-woocommerce
+Plugin URI: https://github.com/hhklik/poschapin-currency-list-woocommerce.git
 Description: Currency list, for woocomerce
-Version: 0.0.2
+Version: 0.0.3
 Author: Humberto Herrador Reyes
 Author URI: https://github.com/hhklik
 Text Domain: clw
@@ -1224,17 +1224,17 @@ register_activation_hook (__FILE__, 'my_plugin_activate');
 
 
 function get_currency_clw_for_woocommerce($currency = false){
-	$data = unserialize(get_option('clw_currency'));
-	?>
+  $data = unserialize(get_option('clw_currency'));
+  ?>
   <option value="">Select Currency Symbol</option>
   <?php
   foreach ($data as $key => $value) {
-	$selected = '';
+  $selected = '';
   if($currency){
     $selected = ($key == $currency) ? 'selected' : '';
   }
   ?>
-	 	<option value="<?php echo $key?>" <?php echo $selected?>><?php echo $value['name']?> - [<?php echo $key?>]</option>	
-	<?php
-	}
+    <option value="<?php echo $key?>" <?php echo $selected?>><?php echo $value['name']?> - [<?php echo $key?>]</option> 
+  <?php
+  }
 }
