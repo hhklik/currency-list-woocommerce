@@ -1,7 +1,7 @@
 <?php 
 /*
-Plugin Name: currency-list-woocommerce
-Plugin URI: https://github.com/hhklik/poschapin-currency-list-woocommerce.git
+Plugin Name: Poschapin Plugin Currency List Woocommerce
+Plugin URI: https://github.com/hhklik/poschapin-plugin-currency-list-woocommerce
 Description: Currency list, for woocomerce
 Version: 0.0.4
 Author: Humberto Herrador Reyes
